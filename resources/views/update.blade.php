@@ -11,10 +11,10 @@
 <form method="post" action="{{ route('update',$customer->id) }}">
     <p>@csrf</p>
     <div>
-        <center><label style="color: white">Name <input type="text" class="form-text" name="user_name" value="{{ $customer['full_name'] }}"></label></center>
+        <center><label style="color: white">Name <input type="text" class="form-text" name="full_name" value="{{ $customer['full_name'] }}"></label></center>
     </div>
     <div>
-        <center><label style="color: white">Phone <input type="text" class="form-text" name="phone" value="{{ $customer['phone_number'] }}"></label></center>
+        <center><label style="color: white">Phone <input type="text" class="form-text" name="phone_number" value="{{ $customer['phone_number'] }}"></label></center>
     </div>
     <div>
         <center> <label style="color: white">Email <input type="text" class="form-text" name="email" value="{{ $customer['email'] }}"></label></center>
