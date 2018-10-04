@@ -17,9 +17,9 @@ Route::prefix('customers')->group(function (){
         return view('welcome');
     })->name('home_list');
     Route::get('list', 'CustomerController@list')->name('customer_list');
-    Route::get('delete/{id}', 'CustomerController@delete')->name('customer_delete');
+    Route::get('{id}/delete', 'CustomerController@delete')->name('customer_delete');
     Route::get('add', 'CustomerController@create')->name('customer_add');
     Route::post('add','CustomerController@store')->name('add');
-    Route::get('update/{id}', 'CustomerController@edit')->name('customer_update');
-    Route::post('update/{id}', 'CustomerController@update')->name('update');
+    Route::get('{id}/update', 'CustomerController@edit')->name('customer_update');
+    Route::post('{id}/update', 'CustomerController@update')->name('update');
 });

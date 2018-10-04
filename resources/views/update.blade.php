@@ -21,6 +21,7 @@
     </div>
     <div>
         <center><input type="submit" value="submit"></center>
+        <center><a href="{{route('customer_list')}}" class="btn btn-info">BACK</a></center>
     </div>
 </form>
 </body>
