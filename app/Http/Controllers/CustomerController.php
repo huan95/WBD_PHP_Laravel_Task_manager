@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\CreateCustomerRequest;
 use App\Model\Customer;
 use Illuminate\Http\Request;
 class CustomerController extends Controller
@@ -30,7 +31,7 @@ return view('add');
 * @param  \Illuminate\Http\Request  $request
 * @return \Illuminate\Http\Response
 */
-public function store(Request $request)
+public function store(CreateCustomerRequest $request)
 {
 $customer = new Customer;
 $customer->full_name = $request->input('full_name');

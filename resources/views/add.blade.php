@@ -8,6 +8,15 @@
     <link href="{{asset('/css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
 </head>
 <body class="fontnen">
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <form method="post" action="{{ route('add') }}">
     <p>@csrf</p>
     <div>
