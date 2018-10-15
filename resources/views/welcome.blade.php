@@ -20,23 +20,29 @@
             height: 100vh;
             margin: 0;
         }
+
         .full-height {
             height: 100vh;
         }
+
         .flex-center {
             align-items: center;
             display: flex;
             justify-content: center;
         }
+
         .position-ref {
             position: relative;
         }
+
         .content {
             text-align: center;
         }
+
         .title {
             font-size: 84px;
         }
+
         .links > a {
             color: #636b6f;
             padding: 0 25px;
@@ -46,6 +52,7 @@
             text-decoration: none;
             text-transform: uppercase;
         }
+
         .m-b-md {
             margin-bottom: 30px;
         }
@@ -54,14 +61,18 @@
 <body>
 <div class="flex-center position-ref full-height fontnen">
     <div class="content">
-        <div class="title m-b-md" style="color: white">
-            <marquee id="marq" scrollamount="10" direction="" loop="50" scrolldelay="0" behavior="Alternate"
-                     onmouseover="this.stop()" onmouseout="this.start()">Task Manager</marquee>
+        <div class="title m-b-md" style="color: green">
+            Task Manager
         </div>
-        <div class="links">
-            <a href="{{ Route('customer_list') }}" style="color: white">Customer</a>
-        </div>
+        <a href="{{Route('cities_list')}}">
+            <button type="button" class="btn btn-outline-primary">City Lists</button>
+        </a>
+        <a href="{{Route('customer_list')}}">
+            <button type="button" class="btn btn-outline-primary">Customer Lists</button>
+        </a>
+
     </div>
+</div>
 </div>
 </body>
 </html>
